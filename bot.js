@@ -5,10 +5,10 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /(BOBBY B)/i;
+      botRegex = /(WAB)/i;
 
   if(request.text && botRegex.test(request.text)) {
-    sleep(10000)
+    sleep(2000)
     this.res.writeHead(200);
     postMessage();
     this.res.end();
@@ -22,7 +22,7 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  botResponse = "BOW YA SHITS";
+  botResponse = "🦀🦀TIME FOR WAB🦀🦀";
 
   options = {
     hostname: 'api.groupme.com',
