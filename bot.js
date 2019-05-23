@@ -7,7 +7,7 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /(WAB)/i;
   console.log(request.name)
-  if(request.text && botRegex.test(request.text)) {
+  if(request.text && botRegex.test(request.text) && request.name != "WAB Bot") {
     sleep(2000)
     this.res.writeHead(200);
     postMessage();
