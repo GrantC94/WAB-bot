@@ -22,7 +22,7 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  botResponse = "🦀🦀TIME FOR WAB🦀🦀";
+  botResponse = "🦀🦀TIME FOR W.A.B.🦀🦀";
 
   options = {
     hostname: 'api.groupme.com',
