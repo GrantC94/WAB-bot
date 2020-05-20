@@ -6,8 +6,6 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /(WAB)/i;
-
-  console.log(request)
   
   if(request.text && botRegex.test(request.text) && request.name != "WAB Bot") {
     if(request.sender_id == "22345473") {
