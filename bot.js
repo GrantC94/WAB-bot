@@ -10,10 +10,17 @@ function respond() {
   console.log(request)
   
   if(request.text && botRegex.test(request.text) && request.name != "WAB Bot") {
-    sleep(2000)
-    this.res.writeHead(200);
-    postMessage();
-    this.res.end();
+    if(request.sender_id == "22345473") {
+      sleep(2000)
+      this.res.writeHead(200);
+      postMessage("👁👄👁 eat me tommy");
+      this.res.end();
+    } else {
+      sleep(2000)
+      this.res.writeHead(200);
+      postMessage("🦀🦀TIME FOR WAB🦀🦀");
+      this.res.end();
+    }
   } else {
     console.log("don't care");
     this.res.writeHead(200);
@@ -21,10 +28,8 @@ function respond() {
   }
 }
 
-function postMessage() {
-  var botResponse, options, body, botReq;
-
-  botResponse = "🦀🦀TIME FOR WAB🦀🦀";
+function postMessage(botResponse) {
+  var options, body, botReq;
 
   options = {
     hostname: 'api.groupme.com',
